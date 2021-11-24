@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".TestFlash">
+
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/sos_flash_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:text="@string/sos_flash"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/strobing_interval_slider" />
+
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/strobe_text_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:text="@string/strobe_text"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/sos_flash_button" />
+
+  <com.google.android.material.slider.Slider
+    android:id="@+id/strobing_interval_slider"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stepSize="10.0"
+    android:valueFrom="10.0"
+    android:valueTo="500.0"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/strobe_switch" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/flash_text_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginHorizontal="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/strobe_text_button">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/flash_text_input"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/input_text"
+      android:imeOptions="actionNext"
+      android:inputType="textCapSentences"
+      android:maxLines="1"
+      android:textSize="18sp" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.switchmaterial.SwitchMaterial
+    android:id="@+id/strobe_switch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="@string/strobe"
+    android:textSize="18sp"
+    app:layout_constraintTop_toBottomOf="@+id/flash_switch" />
+
+
+  <com.google.android.material.switchmaterial.SwitchMaterial
+    android:id="@+id/flash_switch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="@string/flash"
+    android:textSize="18sp"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="64dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
